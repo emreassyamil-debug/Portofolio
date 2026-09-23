@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadeed Emre As Syamil - Portfolio</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+                Portfolio.
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tentang</a>
+                <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pendidikan</a>
+                <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pengalaman</a>
+                <a href="#organization" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Organisasi</a>
+                <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Keahlian</a>
+                <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projek</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Kontak</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle Theme">
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" aria-label="Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Tentang</a>
+            <a href="#education" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Pendidikan</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Pengalaman</a>
+            <a href="#organization" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Organisasi</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Keahlian</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projek</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Kontak</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 bg-gradient-to-tr from-indigo-50/50 via-transparent to-violet-50/50 dark:from-indigo-950/20 dark:to-violet-950/20 -z-10"></div>
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse"></span>
+                        Tersedia Untuk Peluang Baru
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                        Halo, Saya <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Hadeed Emre As Syamil</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl font-normal mx-auto lg:mx-0">
+                        Psychology Student | Human Resources | People Development
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2">
+                            Lihat Projek <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium transition-colors flex items-center justify-center gap-2">
+                            Hubungi Saya <i data-lucide="mail" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
+                        <img src="./public/assets/images/profile.jpg" alt="Hadeed Emre As Syamil" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Tentang Saya</h2>
+                <p class="text-slate-600 dark:text-slate-400">Mengenal lebih dekat latar belakang dan motivasi saya</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1 flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden shadow-xl border-2 border-slate-200 dark:border-slate-800 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+                        <!-- Placeholder Image Box -->
+                        <i data-lucide="user" class="w-32 h-32 text-slate-400 dark:text-slate-600"></i>
+                    </div>
+                </div>
+                <div class="md:col-span-2 space-y-4 text-slate-600 dark:text-slate-300">
+                    <p class="leading-relaxed">
+                        Experienced in leading and managing 100+ members within the Psychology Student Organization, overseeing cross-functional initiatives that enhance collaboration and organizational growth. Skilled in human resource management with hands-on experience as an HR Generalist, focusing on recruitment, talent development, and performance coordination.
+                    </p>
+                    <p class="leading-relaxed">
+                        Served as Chief of Marketing, driving strategic communication, branding, and engagement programs. Passionate about people development, leadership, and organizational excellence.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                            <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">100+</span>
+                            <span class="text-xs text-slate-500">Anggota Dikelola</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                            <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">3.5</span>
+                            <span class="text-xs text-slate-500">IPK S1 Psikologi</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 col-span-2 sm:col-span-1">
+                            <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">6+</span>
+                            <span class="text-xs text-slate-500">Pengalaman Organisasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Pendidikan</h2>
+                <p class="text-slate-600 dark:text-slate-400">Latar belakang pendidikan formal</p>
+            </div>
+            <div id="education-container" class="max-w-3xl mx-auto space-y-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Pengalaman Kerja</h2>
+                <p class="text-slate-600 dark:text-slate-400">Jalur karier profesional saya di industri</p>
+            </div>
+            <div id="experience-container" class="max-w-3xl mx-auto space-y-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Organization/Volunteer Section -->
+        <section id="organization" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Pengalaman Organisasi & Volunteer</h2>
+                <p class="text-slate-600 dark:text-slate-400">Kontribusi sosial dan kepemimpinan tim</p>
+            </div>
+            <div id="organization-container" class="max-w-3xl mx-auto space-y-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Keahlian</h2>
+                <p class="text-slate-600 dark:text-slate-400">Teknologi dan tools yang saya kuasai</p>
+            </div>
+            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Projek Unggulan</h2>
+                <p class="text-slate-600 dark:text-slate-400">Beberapa karya pilihan yang telah saya kerjakan</p>
+            </div>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-2 text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight">Hubungi Saya</h2>
+                <p class="text-slate-600 dark:text-slate-400">Mari berkolaborasi atau sekadar menyapa</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Email</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">emreassyamil@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Lokasi</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Bandung, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
+                            <i data-lucide="share-2" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Sosial Media</h3>
+                            <div class="flex space-x-3 mt-2">
+                                <a href="https://www.linkedin.com/in/hadeed-emre-b50a8b307" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:text-indigo-600 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contact-form" action="https://formsubmit.co/emreassyamil@gmail.com" method="POST" class="space-y-4 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Pesan Baru dari Website Portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nama</label>
+                        <input type="text" name="name" required class="w-full px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Email</label>
+                        <input type="email" name="email" required class="w-full px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Pesan</label>
+                        <textarea name="message" rows="4" required class="w-full px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-500/25 transition-all">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Hadeed Emre As Syamil. Hak Cipta Dilindungi.</p>
+            <div class="flex space-x-4">
+                <a href="#about" class="hover:text-indigo-600 transition-colors">Tentang</a>
+                <a href="#projects" class="hover:text-indigo-600 transition-colors">Projek</a>
+                <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
