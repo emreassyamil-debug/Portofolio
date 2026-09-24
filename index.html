@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadeed Emre As Syamil - Portfolio</title>
+    <title>Hadeed Emre As Syamil | Human Resources &amp; People Development</title>
+    <meta name="description" content="Psychology undergraduate at Universitas Pendidikan Indonesia with hands-on experience in Human Resources, recruitment, people management, and organizational development.">
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
     <!-- Google Fonts Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,248 +21,339 @@
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
 
+    <a href="#main-content" class="sr-only focus:not-sr-only fixed left-4 top-4 z-[60] rounded-lg bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-lg">Skip to main content</a>
+
     <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                Portfolio.
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                Hadeed
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tentang</a>
-                <a href="#education" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pendidikan</a>
-                <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Pengalaman</a>
-                <a href="#organization" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Organisasi</a>
-                <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Keahlian</a>
-                <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projek</a>
-                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Kontak</a>
+            <nav aria-label="Primary navigation" class="hidden md:flex items-center gap-5 xl:gap-7 text-sm font-medium">
+                <a href="#about" class="whitespace-nowrap hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#experience" class="whitespace-nowrap hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+                <a href="#organization" class="whitespace-nowrap hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Leadership</a>
+                <a href="#projects" class="whitespace-nowrap hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Impact</a>
+                <a href="#skills" class="whitespace-nowrap hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#contact" class="whitespace-nowrap hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
             </nav>
 
             <div class="flex items-center space-x-4">
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle Theme">
+                <button id="theme-toggle" type="button" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Switch to dark theme" aria-pressed="false">
                     <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                     <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
                 </button>
 
                 <!-- Mobile Menu Button -->
-                <button id="menu-btn" class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" aria-label="Menu">
+                <button id="menu-btn" type="button" class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Tentang</a>
-            <a href="#education" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Pendidikan</a>
-            <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Pengalaman</a>
-            <a href="#organization" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Organisasi</a>
-            <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Keahlian</a>
-            <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projek</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Kontak</a>
-        </div>
+        <nav id="mobile-menu" aria-label="Mobile navigation" aria-hidden="true" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Experience</a>
+            <a href="#organization" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Leadership</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Impact</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Skills</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
+        </nav>
     </header>
 
-    <main class="pt-16">
+    <main id="main-content" tabindex="-1" class="pt-16">
         <!-- Hero Section -->
-        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-            <div class="absolute inset-0 bg-gradient-to-tr from-indigo-50/50 via-transparent to-violet-50/50 dark:from-indigo-950/20 dark:to-violet-950/20 -z-10"></div>
-            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <section id="hero" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 bg-slate-100/70 dark:bg-slate-900/40 -z-10"></div>
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse"></span>
-                        Tersedia Untuk Peluang Baru
+                    <div class="inline-flex max-w-full items-center gap-2 px-3 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs sm:text-sm font-semibold tracking-wide">
+                        <span class="w-2 h-2 shrink-0 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse" aria-hidden="true"></span>
+                        <span>Open to HR &amp; People Development Opportunities</span>
                     </div>
-                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
-                        Halo, Saya <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Hadeed Emre As Syamil</span>
+                    <h1 class="max-w-4xl break-words text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase leading-tight tracking-tight text-slate-900 dark:text-white">
+                        Hadeed Emre As Syamil
                     </h1>
-                    <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl font-normal mx-auto lg:mx-0">
+                    <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-300 max-w-2xl font-medium mx-auto lg:mx-0">
                         Psychology Student | Human Resources | People Development
                     </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#projects" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2">
-                            Lihat Projek <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                        Combining psychological knowledge, hands-on HR experience, and organizational leadership to support people and organizational development.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#experience" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2">
+                            View My Experience <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
                         </a>
-                        <a href="#contact" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium transition-colors flex items-center justify-center gap-2">
-                            Hubungi Saya <i data-lucide="mail" class="w-4 h-4"></i>
+                        <a href="#contact" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold transition-colors flex items-center justify-center gap-2">
+                            Contact Me <i data-lucide="mail" class="w-4 h-4" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
-                        <img src="./public/assets/images/profile.jpg" alt="Hadeed Emre As Syamil" class="w-full h-full object-cover">
+                        <img src="/assets/images/profile.jpg" alt="Hadeed Emre As Syamil, Psychology undergraduate with Human Resources experience" class="w-full h-full object-cover">
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="highlights" aria-labelledby="highlights-title" class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-2 text-center mb-10 sm:mb-12">
+                <h2 id="highlights-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Career Highlights</h2>
+                <p class="text-slate-600 dark:text-slate-400">Career experience across HR, people management, and organizational leadership</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <article class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[150px]">
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight text-indigo-700 dark:text-indigo-300">100+</p>
+                        <h3 class="mt-2 text-base font-semibold text-slate-900 dark:text-white">Members Led</h3>
+                    </div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">Psychology Student Activity Unit</p>
+                </article>
+                <article class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[150px]">
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight text-indigo-700 dark:text-indigo-300">30–50/day</p>
+                        <h3 class="mt-2 text-base font-semibold text-slate-900 dark:text-white">CVs Screened</h3>
+                    </div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">HRD Internship</p>
+                </article>
+                <article class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[150px]">
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight text-indigo-700 dark:text-indigo-300">10+</p>
+                        <h3 class="mt-2 text-base font-semibold text-slate-900 dark:text-white">Programs Supervised</h3>
+                    </div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">Student Organization Leadership</p>
+                </article>
+                <article class="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between min-h-[150px]">
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight text-indigo-700 dark:text-indigo-300">13</p>
+                        <h3 class="mt-2 text-base font-semibold text-slate-900 dark:text-white">Divisions Coordinated</h3>
+                    </div>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">Organizational Leadership Experience</p>
+                </article>
             </div>
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section id="about" aria-labelledby="about-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Tentang Saya</h2>
-                <p class="text-slate-600 dark:text-slate-400">Mengenal lebih dekat latar belakang dan motivasi saya</p>
+                <h2 id="about-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">About Me</h2>
+                <p class="text-slate-600 dark:text-slate-400">Psychology foundation, HR experience, and people-focused leadership</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-1 flex justify-center">
-                    <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden shadow-xl border-2 border-slate-200 dark:border-slate-800 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
-                        <!-- Placeholder Image Box -->
-                        <i data-lucide="user" class="w-32 h-32 text-slate-400 dark:text-slate-600"></i>
-                    </div>
-                </div>
-                <div class="md:col-span-2 space-y-4 text-slate-600 dark:text-slate-300">
-                    <p class="leading-relaxed">
-                        Experienced in leading and managing 100+ members within the Psychology Student Organization, overseeing cross-functional initiatives that enhance collaboration and organizational growth. Skilled in human resource management with hands-on experience as an HR Generalist, focusing on recruitment, talent development, and performance coordination.
-                    </p>
-                    <p class="leading-relaxed">
-                        Served as Chief of Marketing, driving strategic communication, branding, and engagement programs. Passionate about people development, leadership, and organizational excellence.
-                    </p>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
-                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                            <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">100+</span>
-                            <span class="text-xs text-slate-500">Anggota Dikelola</span>
-                        </div>
-                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                            <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">3.5</span>
-                            <span class="text-xs text-slate-500">IPK S1 Psikologi</span>
-                        </div>
-                        <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 col-span-2 sm:col-span-1">
-                            <span class="block text-2xl font-bold text-indigo-600 dark:text-indigo-400">6+</span>
-                            <span class="text-xs text-slate-500">Pengalaman Organisasi</span>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+                <div class="md:col-span-2">
+                    <div class="h-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-100/70 dark:bg-slate-900/70 p-6 sm:p-7">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-indigo-700 dark:text-indigo-300">Career Focus</p>
+                        <div class="mt-6 space-y-5">
+                            <div class="border-l-2 border-indigo-500 pl-4">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">Psychology</h3>
+                                <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Academic foundation</p>
+                            </div>
+                            <div class="border-l-2 border-indigo-500 pl-4">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">Human Resources</h3>
+                                <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Hands-on HR experience</p>
+                            </div>
+                            <div class="border-l-2 border-indigo-500 pl-4">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">Leadership</h3>
+                                <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Managing people and programs</p>
+                            </div>
+                            <div class="border-l-2 border-indigo-500 pl-4">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">People Development</h3>
+                                <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Career direction</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
-            <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Pendidikan</h2>
-                <p class="text-slate-600 dark:text-slate-400">Latar belakang pendidikan formal</p>
-            </div>
-            <div id="education-container" class="max-w-3xl mx-auto space-y-6">
-                <!-- Injected via JavaScript -->
+                <div class="md:col-span-3 space-y-5 text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+                    <p>
+                        I am a Psychology undergraduate at Universitas Pendidikan Indonesia with hands-on experience in Human Resources, recruitment, team management, and organizational development.
+                    </p>
+                    <p>
+                        My experience spans HR recruitment and administration, training support, student organization leadership, and people management. Through these experiences, I have developed an interest in applying psychological perspectives to create effective people and organizational practices.
+                    </p>
+                    <p>
+                        I am particularly interested in Human Resources, Learning &amp; Development, and People Development, where I can combine my academic background with practical experience working with people and teams.
+                    </p>
+                </div>
             </div>
         </section>
 
         <!-- Work Experience Section -->
-        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section id="experience" aria-labelledby="experience-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Pengalaman Kerja</h2>
-                <p class="text-slate-600 dark:text-slate-400">Jalur karier profesional saya di industri</p>
+                <h2 id="experience-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Professional Experience</h2>
+                <p class="text-slate-600 dark:text-slate-400">Hands-on experience across Human Resources, people management, and educational support</p>
             </div>
-            <div id="experience-container" class="max-w-3xl mx-auto space-y-6">
+            <div id="experience-container" class="max-w-4xl mx-auto space-y-6">
                 <!-- Injected via JavaScript -->
             </div>
         </section>
 
         <!-- Organization/Volunteer Section -->
-        <section id="organization" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
+        <section id="organization" aria-labelledby="leadership-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
             <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Pengalaman Organisasi & Volunteer</h2>
-                <p class="text-slate-600 dark:text-slate-400">Kontribusi sosial dan kepemimpinan tim</p>
+                <h2 id="leadership-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Leadership &amp; Organizational Experience</h2>
+                <p class="text-slate-600 dark:text-slate-400">Leading teams, coordinating programs, and contributing to organizational initiatives</p>
             </div>
-            <div id="organization-container" class="max-w-3xl mx-auto space-y-6">
+            <div id="organization-container" class="max-w-4xl mx-auto space-y-6">
                 <!-- Injected via JavaScript -->
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section id="projects" aria-labelledby="impact-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
             <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Keahlian</h2>
-                <p class="text-slate-600 dark:text-slate-400">Teknologi dan tools yang saya kuasai</p>
+                <h2 id="impact-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Selected Impact</h2>
+                <p class="text-slate-600 dark:text-slate-400">Meaningful professional and organizational contributions</p>
             </div>
-            <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="projects-container" class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Injected via JavaScript -->
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
+        <section id="skills" aria-labelledby="skills-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Projek Unggulan</h2>
-                <p class="text-slate-600 dark:text-slate-400">Beberapa karya pilihan yang telah saya kerjakan</p>
+                <h2 id="skills-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Skills</h2>
+                <p class="text-slate-600 dark:text-slate-400">Capabilities relevant to Human Resources, people management, and psychology-based work</p>
             </div>
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="skills-container" class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Injected via JavaScript -->
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section id="education" aria-labelledby="education-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
             <div class="space-y-2 text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">Hubungi Saya</h2>
-                <p class="text-slate-600 dark:text-slate-400">Mari berkolaborasi atau sekadar menyapa</p>
+                <h2 id="education-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Education</h2>
+                <p class="text-slate-600 dark:text-slate-400">Psychology foundation supporting a people and organizational career direction</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                <div class="space-y-6">
-                    <div class="flex items-start space-x-4">
-                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
+            <div id="education-container" class="max-w-4xl mx-auto space-y-6">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <section id="certificates" aria-labelledby="certificates-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="space-y-2 text-center mb-12">
+                <h2 id="certificates-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Certificates &amp; Training</h2>
+                <p class="text-slate-600 dark:text-slate-400">Continuous learning that supports a Human Resources and People Development career</p>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <article class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                        <div class="min-w-0">
+                            <p class="text-xs font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">Training Support</p>
+                            <h3 class="mt-2 text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Anti-Bullying Teacher Training</h3>
+                            <p class="mt-1 break-words text-sm font-semibold text-indigo-700 dark:text-indigo-300">Anti-Bullying Training for Junior High School Teachers (UPI)</p>
                         </div>
-                        <div>
-                            <h3 class="font-semibold">Email</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">emreassyamil@gmail.com</p>
-                        </div>
+                        <span class="w-fit shrink-0 rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">July 2025</span>
                     </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
-                            <i data-lucide="map-pin" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold">Lokasi</h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400">Bandung, Indonesia</p>
-                        </div>
+                    <p class="text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">Supported workshops for 30+ junior high school teachers by preparing evaluation instruments and training materials, then summarizing post-training evaluation data.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-lg bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">Training Support</span>
+                        <span class="rounded-lg bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">Evaluation</span>
                     </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
-                            <i data-lucide="share-2" class="w-6 h-6"></i>
+                </article>
+                <div class="p-6 sm:p-7 rounded-2xl bg-slate-100/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Certificates &amp; credentials</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Professional development and certifications will be added as verified credentials become available.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="currently" aria-labelledby="currently-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl my-8">
+            <div class="space-y-2 text-center mb-12">
+                <h2 id="currently-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Currently</h2>
+                <p class="text-slate-600 dark:text-slate-400">What I am focusing on now</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <p class="text-base sm:text-lg leading-relaxed text-slate-900 dark:text-white">Psychology undergraduate at Universitas Pendidikan Indonesia, building hands-on experience in Human Resources and People Development.</p>
+                    <div class="mt-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">Focus</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Human Resources · Recruitment · Learning &amp; Development · People Development</p>
                         </div>
                         <div>
-                            <h3 class="font-semibold">Sosial Media</h3>
-                            <div class="flex space-x-3 mt-2">
-                                <a href="https://www.linkedin.com/in/hadeed-emre-b50a8b307" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:text-indigo-600 transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                            </div>
+                            <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">Open to</h3>
+                            <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">HR Internship · HR Generalist · Recruitment · Learning &amp; Development opportunities</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <form id="contact-form" action="https://formsubmit.co/emreassyamil@gmail.com" method="POST" class="space-y-4 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                    <!-- FormSubmit Configuration -->
+        <section id="contact" aria-labelledby="contact-title" class="scroll-mt-20 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
+                <h2 id="contact-title" class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Let's Connect</h2>
+                <p class="text-lg font-semibold text-slate-900 dark:text-white">Have an opportunity or want to connect?</p>
+                <p class="text-slate-600 dark:text-slate-400">I'm open to conversations around Human Resources, Recruitment, Learning &amp; Development, and People Development.</p>
+            </div>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <form id="contact-form" action="https://formsubmit.co/emreassyamil@gmail.com" method="POST" class="space-y-5 bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
                     <input type="hidden" name="_subject" value="Pesan Baru dari Website Portfolio">
                     <input type="hidden" name="_captcha" value="false">
-                    
+
                     <div>
-                        <label class="block text-sm font-medium mb-1">Nama</label>
-                        <input type="text" name="name" required class="w-full px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <label for="contact-name" class="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Name <span class="text-indigo-600 dark:text-indigo-400" aria-hidden="true">*</span></label>
+                        <input id="contact-name" type="text" name="name" autocomplete="name" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium mb-1">Email</label>
-                        <input type="email" name="email" required class="w-full px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <label for="contact-email" class="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Email <span class="text-indigo-600 dark:text-indigo-400" aria-hidden="true">*</span></label>
+                        <input id="contact-email" type="email" name="email" autocomplete="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium mb-1">Pesan</label>
-                        <textarea name="message" rows="4" required class="w-full px-4 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        <label for="contact-message" class="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Message <span class="text-indigo-600 dark:text-indigo-400" aria-hidden="true">*</span></label>
+                        <textarea id="contact-message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-500/25 transition-all">
-                        Kirim Pesan
+                    <p class="text-xs text-slate-500 dark:text-slate-400"><span class="text-indigo-600 dark:text-indigo-400" aria-hidden="true">*</span> Required fields</p>
+                    <button type="submit" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-500/25 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 transition-colors">
+                        Send Message
                     </button>
                 </form>
+
+                <div class="space-y-6 lg:pt-2">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6" aria-hidden="true"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Email</h3>
+                            <a href="mailto:emreassyamil@gmail.com" class="mt-1 block break-words text-sm text-indigo-700 dark:text-indigo-300 hover:underline">emreassyamil@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Location</h3>
+                            <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Bandung, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 shrink-0">
+                            <i data-lucide="briefcase-business" class="w-6 h-6" aria-hidden="true"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Professional profile</h3>
+                            <a href="https://www.linkedin.com/in/hadeed-emre-b50a8b307" target="_blank" rel="noopener noreferrer" aria-label="Visit Hadeed Emre As Syamil's LinkedIn profile (opens in a new tab)" class="mt-1 inline-flex items-center gap-2 break-words text-sm font-medium text-indigo-700 dark:text-indigo-300 hover:underline">LinkedIn <i data-lucide="external-link" class="w-4 h-4 shrink-0" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-slate-500">
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-slate-600 dark:text-slate-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Hadeed Emre As Syamil. Hak Cipta Dilindungi.</p>
+            <p>&copy; 2026 Hadeed Emre As Syamil. All rights reserved.</p>
             <div class="flex space-x-4">
-                <a href="#about" class="hover:text-indigo-600 transition-colors">Tentang</a>
-                <a href="#projects" class="hover:text-indigo-600 transition-colors">Projek</a>
-                <a href="#contact" class="hover:text-indigo-600 transition-colors">Kontak</a>
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Impact</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
             </div>
         </div>
     </footer>
